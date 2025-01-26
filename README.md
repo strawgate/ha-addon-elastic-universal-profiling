@@ -1,3 +1,7 @@
+# Elastic Universal Profiling add-on
+
+This Add-on deploys a docker container with Elastic's Universal Profiling agent. The agent is a lightweight, low-overhead, and high-fidelity profiler that can be used to profile Python applications. The agent is designed to be used in production environments.
+
 # Example Home Assistant add-on repository
 
 This repository can be used as a "blueprint" for add-on development to help you get started.

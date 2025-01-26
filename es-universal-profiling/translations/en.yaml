@@ -1,0 +1,10 @@
+configuration:
+  projectid:
+    name: Project ID
+    description: The profiling project ID provided by Elastic Observability during setup
+  secrettoken:
+    name: Secret Token
+    description: The secret token provided by Elastic Observability during setup
+  collectionagent:
+    name: Collection Agent
+    description: The URL of the Elastic Observability collection agent

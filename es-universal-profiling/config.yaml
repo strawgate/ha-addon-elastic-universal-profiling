@@ -1,0 +1,30 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Elastic Universal Profiling
+version: "0.1.0"
+slug: elastic
+description: Elastic Universal Profiling add-on
+url: "https://github.com/strawgate/ha-addon-elastic-universal-profiling"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+startup: application
+boot: auto
+apparmor: false
+full_access: true
+map:
+  - /etc/machine-id:/etc/machine-id:ro \
+  - /var/run/docker.sock:/var/run/docker.sock 
+  - /sys/kernel/debug:/sys/kernel/debug:ro
+options:
+  projectid: 1
+  secrettoken: "secret token"
+  collectionagent: "url"
+schema:
+  projectid: "int"
+  secrettoken: "str"
+  collectionagent: "str"
+image: "ghcr.io/strawgate/ha-addon-elastic-universal-profiling-{arch}"
