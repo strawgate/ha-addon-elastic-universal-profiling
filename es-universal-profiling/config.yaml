@@ -17,7 +17,6 @@ privileged:
   - SYS_RESOURCE
 docker_api: true
 kernel_modules: true
-devicetree: true
 options:
   projectid: 1
   secrettoken: "secret token"
