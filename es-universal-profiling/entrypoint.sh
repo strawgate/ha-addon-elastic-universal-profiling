@@ -7,10 +7,10 @@ PROJECTID="$(bashio::config 'projectid')"
 SECRETTOKEN="$(bashio::config 'secrettoken')"
 COLLECTIONAGENT="$(bashio::config 'collectionagent')"
 
-projectid=$1
-echo -e "project-id $PROJECTID" >> /etc/Elastic/universal-profiling/pf-host-agent.conf
-echo -e "secret-token $SECRETTOKEN" >> /etc/Elastic/universal-profiling/pf-host-agent.conf
-echo -e "collection-agent $COLLECTIONAGENT" >> /etc/Elastic/universal-profiling/pf-host-agent.conf
+echo -e "project-id $PROJECTID" >> /pf-host-agent.conf
+echo -e "secret-token $SECRETTOKEN" >> /pf-host-agent.conf
+echo -e "collection-agent $COLLECTIONAGENT" >> /pf-host-agent.conf
 
 echo "Starting Elastic Universal Profiling Agent"
-/opt/Elastic/universal-profiling/pf-host-agent/pf-host-agent
+cat pf-host-agent.conf
+/pf-host-agent/pf-host-agent -config /pf-host-agent.conf
